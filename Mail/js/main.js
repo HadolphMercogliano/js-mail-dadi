@@ -3,7 +3,8 @@
 // stampa un messaggio appropriato sull'esito del controllo.
 
 
-let userMail = prompt("inserisci la tua mail qui")
+let userMail = document.getElementById("userMail").innerHTML;
+console.log(userMail);
 
 const mailList = ["nora83@yahoo.it",
     "qlangworth @yahoo.it",
@@ -15,11 +16,11 @@ const mailList = ["nora83@yahoo.it",
     "ibayer @gmail.com",
     "alberto61@gmail.com",
     "liliana89@gmail.com"]
-console.log(mailList.length);
+// console.log(mailList.length);
 
 let dirittoDiAccesso = false;
 // controlla che la mail inserita dall' utente sia nella lista
-for (i = 0; i < mailList.length; i++) {
+for (i = 0; i < 10; i++) {
     if (mailList[i] == userMail) {
         dirittoDiAccesso = true;
     }
@@ -27,5 +28,5 @@ for (i = 0; i < mailList.length; i++) {
 if (dirittoDiAccesso) {
     alert("benvenuto " + userMail)
 } else {
-    alert("YOU SHALL NOT PASS")
+    // alert("YOU SHALL NOT PASS")
 }
