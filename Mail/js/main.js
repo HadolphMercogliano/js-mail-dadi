@@ -22,10 +22,8 @@ let dirittoDiAccesso = false;
 for (i = 0; i < mailList.length; i++) {
     if (mailList[i] == userMail) {
         dirittoDiAccesso = true;
-
     }
 }
-
 if (dirittoDiAccesso) {
     alert("benvenuto " + userMail)
 } else {
