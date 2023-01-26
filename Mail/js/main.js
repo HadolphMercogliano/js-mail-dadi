@@ -29,19 +29,15 @@ ProcediButtonEl.addEventListener(
 
         let dirittoDiAccesso = false;
         // controlla che la mail inserita dall' utente sia nella lista
-        for (i = 0; i < 11; i++) {
+        for (i = 0; i < mailList.length; i++) {
             if (mailList[i] == userMail) {
                 dirittoDiAccesso = true;
-
-
             }
         }
         if (dirittoDiAccesso) {
             document.getElementById('result').innerHTML = ('<img src="./img/welcome-gif-33.gif" alt="Welcome">')
         } else {
             document.getElementById('result').innerHTML = ('<img src="./img/you-shall-not-pass.gif" alt="Autorizzazione negata">');
-
-
         }
     }
 )
