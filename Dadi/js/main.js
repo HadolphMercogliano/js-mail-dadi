@@ -12,17 +12,28 @@
 // se il numero del PC è più alto stampa un messaggio
 // se il numero dell' USER è piùù alto stampa un altro messaggio
 // se i numeri sono uguali stampa un altro messaggio
+const lanciaIDadi = document.getElementById("lanciaIDadi");
+console.log(lanciaIDadi);
+lanciaIDadi.addEventListener(
+    'click',
+    function () {
 
-let dadoPC = Math.floor(Math.random() * 6) + 1;
-console.log(dadoPC);
-let dadoUSER = Math.floor(Math.random() * 6) + 1;
-console.log(dadoUSER);
+        let dadoPC = Math.floor(Math.random() * 6) + 1;
+        // console.log(dadoPC);
+        let dadoUSER = Math.floor(Math.random() * 6) + 1;
+        // console.log(dadoUSER);
 
-if (dadoPC > dadoUSER) {
-    alert(`PC vince con ${dadoPC} contro ${dadoUSER}`);
-} else if (dadoPC < dadoUSER) {
-    alert(`USER vince con ${dadoUSER} contro ${dadoPC}`);
-} else {
-    alert(`Avete pareggiato con ${dadoUSER}`);
+        if (dadoPC > dadoUSER) {
 
-}
+            document.getElementById("vincitore").innerHTML = `Il PC ha vinto con ${dadoPC} contro ${dadoUSER}`
+
+        } else if (dadoPC < dadoUSER) {
+
+            document.getElementById("vincitore").innerHTML = `Hai vinto con ${dadoUSER} contro ${dadoPC}`
+
+        } else {
+
+            document.getElementById("vincitore").innerHTML = `Avete pareggiato con ${dadoPC}`
+        }
+    }
+)
